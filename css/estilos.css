@@ -1,0 +1,193 @@
+body {
+  font-family: "Play", sans-serif;
+}
+
+/* -------------------------------- CARRUSEL -------------------------------- */
+.carousel-inner {
+  max-height: 50rem;
+}
+
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------- VARIOS --------------------------------- */
+.main-yo {
+  width: 100%;
+  min-height: 500px;
+}
+
+.altura, .main-actividades {
+  width: 100%;
+  min-height: 100vh;
+  margin: 10px 0 50px 0;
+}
+
+.imagenes {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------- MAIN ACTIVIDADES ---------------------------- */
+.main-actividades {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr;
+  margin-bottom: 30px;
+}
+.main-actividades .titulo {
+  text-align: center;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-actividades .actividades {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  justify-items: center;
+  margin: 5px;
+  border: solid 2px #000;
+  padding: 2px;
+}
+.main-actividades .actividades img {
+  width: 200px;
+  padding-top: 9px;
+}
+.main-actividades .actividades .actividades-texto {
+  padding: 10px;
+  text-align: justify;
+}
+.main-actividades .actividades .actividades-texto h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* ------------------------------ MAIN GALERIA ------------------------------ */
+.main-galeria{
+  min-height: 100vh;
+}
+.contenido-img{
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 250px;
+  grid-gap:20px;
+}
+.contenido-img .caja-img figure{
+  width: 100%;
+  height: 100%;
+}
+.contenido-img .caja-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.caja-img{
+  padding: 10px;
+}
+
+.titulo-galeria{    
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-border{
+  border: solid 10px white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all ease-out 0.2s;
+}
+.card-border:hover{
+  transform: scale(1.05);
+}
+@media screen and (min-width: 1024px){
+  .main-galeria{
+    padding: 20px;
+}
+.contenido-img{
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap:20px;
+}
+.contenido-img .caja-img figure{
+    width: 100%;
+    height: 100%;
+}
+.contenido-img .caja-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+.footer {
+  width: 100%;
+  min-height: 10px;
+  background-color: rgb(70, 67, 67);
+  color: #fff;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .pie-contenido {
+  display: grid;
+  height: 90%;
+  grid-template-columns: 1fr 4fr 4fr;
+  grid-template-areas: "logo sitios contacto" "copyright copyright copyright ";
+}
+.footer .pie-contenido .pie-logo {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.footer .pie-contenido .sitios {
+  display: grid;
+  justify-content: center;
+  grid-area: sitios;
+  padding: 10px;
+}
+.footer .pie-contenido .sitios p {
+  font-weight: 600;
+}
+.footer .pie-contenido .contacto {
+  display: grid;
+  grid-row: initial;
+  justify-content: center;
+  grid-area: contacto;
+}
+.footer .pie-contenido .contacto a {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .pie-contenido .copyright {
+  margin-top: 10px;
+  background-color: rgba(100, 97, 97, 0.486);
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: copyright;
+}/*# sourceMappingURL=estilos.css.map */

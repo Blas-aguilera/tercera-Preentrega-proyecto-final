@@ -1,0 +1,140 @@
+$colorFooter: rgb(70, 67, 67);
+
+@mixin size($width, $mh) {
+    width: $width;
+    min-height: $mh;    
+}
+body{
+    font-family: 'Play', sans-serif;
+}
+/* -------------------------------- CARRUSEL -------------------------------- */
+.carousel-inner {
+    max-height: 50rem;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------------------------- VARIOS --------------------------------- */
+.main-yo{
+    @include size(100%, 500px);
+}
+
+.altura{
+    @include size(100%, 100vh);
+    margin: 10px 0 50px 0;
+}   
+.imagenes{
+    max-width: 100%;
+    height: auto;
+}
+/* ---------------------------- MAIN ACTIVIDADES ---------------------------- */
+.main-actividades{
+    @extend .altura;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    margin-bottom: 30px;
+
+    .titulo{
+        text-align: center;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .actividades{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        justify-items: center;
+        margin: 5px;
+        border: solid 2px #000;
+        padding: 2px;
+
+        img{
+            width: 200px;
+            padding-top: 9px;
+        }
+
+        .actividades-texto{
+            padding: 10px;
+            text-align: justify;
+
+            h3{
+                text-align: center;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+.footer{
+    @include size(100%, 10px);
+    background-color: $colorFooter;
+    color: #fff;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .pie-contenido{
+        display: grid;
+        height: 90%;
+        grid-template-columns: 1fr 4fr 4fr;
+        grid-template-areas: 
+        "logo sitios contacto"
+        "copyright copyright copyright ";
+
+        .pie-logo{
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        .sitios{
+            display: grid;
+            justify-content: center;
+            grid-area: sitios;
+            padding: 10px;
+
+            p{
+                font-weight: 600;
+            }
+        }
+
+        .contacto{
+            display: grid;
+            grid-row: initial;
+            justify-content: center;
+            grid-area: contacto;
+
+            a{
+                font-weight: 600;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .copyright{
+            margin-top: 10px;
+            background-color:  rgba(100, 97, 97, 0.486);
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: copyright;
+        }
+    }
+}
